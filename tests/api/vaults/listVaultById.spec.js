@@ -46,5 +46,3 @@ test('Validate vault metadata', () => {
     // Add more assertions as needed
 
 });
-
-

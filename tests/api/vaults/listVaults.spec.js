@@ -29,7 +29,7 @@ test.beforeAll('Get Vaults List', async ({ request }) => {
 });
 
 
-test('Each vault should have non-empty id, name, and networkType === "TEST"', () => {
+test('Each vault should have non-empty id, name, and networkType === "TEST"',{tag:['@PlaywrightWithJenkins']}, () => {
   for (const [i, item] of vaults.entries()) {
     expect.soft(typeof item.id, `Vault[${i}].id should be a string`).toBe('string');
     expect.soft(item.id.length, `Vault[${i}].id should not be empty`).toBeGreaterThan(0);

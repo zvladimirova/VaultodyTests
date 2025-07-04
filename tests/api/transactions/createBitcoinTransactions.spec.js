@@ -93,7 +93,7 @@ test('Create Bitcoin Transaction with 3 recipients', async ({ request }) => {
 });
 
 
-test('Create Bitcoin Transaction with incorrect address recipient', async ({ request }) => {
+test('Create Bitcoin Transaction with incorrect address recipient',{tag:['@PlaywrightWithJenkins']}, async ({ request }) => {
     const recipients = [
         {
             address: 'tltc1qfua8w0nc6zlls6zzau86t7v6c7e076458yrrqs',
